@@ -1,3 +1,37 @@
+:root {
+  /* Font */
+  --font-family: "IKEA Noto Sans", "Noto Sans", Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight-reg: 400;
+  --font-weight-bold: 700;
+
+  /* Font Sizes */
+  --font-size-base: 16px;
+  --h1-size: 2.25rem; /* 36px */
+  --h2-size: 1.125rem; /* 18px circa - Sottotitoli */
+  --price-size: 1.5rem; /* 24px */
+  --small-size: 0.875rem; /* 14px */
+
+  /* Colori */
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-grey-dark: #484848;
+  --color-grey-light: #f5f5f5;
+  --ikea-blue: #0058a3;
+  --ikea-yellow: #ffdb00;
+
+  /* Layout & Spazi */
+  --padding-card: 1.5rem; /* 24px desktop */
+  --padding-card-mobile: 1rem; /* 16px mobile */
+  --section-gap: 2.5rem; /* 40px tra blocchi */
+
+
+
+/*@media*/
+/* Mobile: sotto i 600px (1 colonna di prodotti).
+Tablet: da 600px a 900px (2 colonne).
+Desktop: sopra i 900px/1200px (4 o 5 colonne). */
+}
 /* STYLING HEADER */
 
 /* STYLING MAIN */
