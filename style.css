@@ -33,6 +33,33 @@ Tablet: da 600px a 900px (2 colonne).
 Desktop: sopra i 900px/1200px (4 o 5 colonne). */
 }
 /* STYLING HEADER */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0058a3;
+  letter-spacing: 1px;
+}
 
 /* STYLING MAIN */
 
