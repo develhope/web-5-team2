@@ -1,84 +1,229 @@
+@font-face {
+	font-family: "Noto IKEA";
+	src:
+		url("https://www.ikea.com/global/assets/fonts/woff2/noto-ikea-400.latin.5a052965.woff2"),
+		url("https://www.ikea.com/global/assets/fonts/woff2/noto-ikea-700.latin.a3f10ed8.woff2");
+}
+
 :root {
-  /* Font */
-  --font-family: "IKEA Noto Sans", "Noto Sans", Arial, sans-serif;
-  --line-height: 1.5;
-  --font-weight-reg: 400;
-  --font-weight-bold: 700;
+	/* Font */
+	--font-family: "Noto IKEA", "IKEA Noto Sans", "Noto Sans", Arial, sans-serif;
+	--line-height: 1.5;
+	--font-weight-reg: 400;
+	--font-weight-bold: 700;
 
-  /* Font Sizes */
-  --font-size-base: 16px;
-  --h1-size: 2.25rem; /* 36px */
-  --h2-size: 1.125rem; /* 18px circa - Sottotitoli */
-  --price-size: 1.5rem; /* 24px */
-  --small-size: 0.875rem; /* 14px */
+	/* Font Sizes */
+	--font-size-base: 16px;
+	--h1-size: 2.25rem; /* 36px */
+	--h2-size: 1.125rem; /* 18px circa - Sottotitoli */
+	--price-size: 1.5rem; /* 24px */
+	--small-size: 0.875rem; /* 14px */
+	--footer-top-links-size: 1.25rem; /* 20px */
+	--footer-bottom-links-size: 14px;
 
-  /* Colori */
-  --color-white: #ffffff;
-  --color-black: #111111;
-  --color-grey-dark: #484848;
-  --color-grey-light: #f5f5f5;
-  --ikea-blue: #0058a3;
-  --ikea-yellow: #ffdb00;
+	/* Colori */
+	--color-white: #ffffff;
+	--color-black: #111111;
+	--color-grey-dark: #484848;
+	--color-grey-light: #f5f5f5;
+	--ikea-blue: #0058a3;
+	--ikea-yellow: #ffdb00;
 
-  /* Layout & Spazi */
-  --padding-card: 1.5rem; /* 24px desktop */
-  --padding-card-mobile: 1rem; /* 16px mobile */
-  --section-gap: 2.5rem; /* 40px tra blocchi */
+	/* Layout & Spazi */
+	--padding-card: 1.5rem; /* 24px desktop */
+	--padding-card-mobile: 1rem; /* 16px mobile */
+	--section-gap: 2.5rem; /* 40px tra blocchi */
 
-
-
-/*@media*/
-/* Mobile: sotto i 600px (1 colonna di prodotti).
+	/*@media*/
+	/* Mobile: sotto i 600px (1 colonna di prodotti).
 Tablet: da 600px a 900px (2 colonne).
 Desktop: sopra i 900px/1200px (4 o 5 colonne). */
 }
 /* STYLING HEADER */
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+	background-color: #ffffff;
+	border-bottom: 1px solid #e5e5e5;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 40px;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #0058a3;
-  letter-spacing: 1px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #0058a3;
+	letter-spacing: 1px;
 }
 .nav-links {
-  display: flex;
-  gap: 30px;
+	display: flex;
+	gap: 30px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #111;
-  font-size: 14px;
-  font-weight: 600;
-  padding-bottom: 5px;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s ease;
+	text-decoration: none;
+	color: #111;
+	font-size: 14px;
+	font-weight: 600;
+	padding-bottom: 5px;
+	border-bottom: 2px solid transparent;
+	transition: all 0.2s ease;
 }
 
 .nav-links a:hover {
-  border-bottom: 2px solid #111;
+	border-bottom: 2px solid #111;
 }
 
 /* STYLING MAIN */
 
 /* STYLING FOOTER */
+footer {
+	position: relative;
+	width: 100%;
+	font-family: var(--font-family);
+	background-color: #000;
+	padding: 8.75rem 1.5rem 1rem 1.5rem;
+	overflow: hidden;
+}
+
+footer a {
+	color: var(--color-white);
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+.footer-logo-container {
+	max-width: 75rem;
+	margin: auto;
+	margin-bottom: 5rem;
+}
+
+.footer-logo {
+	display: block;
+	background: repeating-linear-gradient(-45deg, #b79e05 0%, #b79e05 35.6%, #b7b7b7 35.6%, #b7b7b7 71.2%);
+	animation: movingStripes 8s linear infinite;
+	position: relative;
+	z-index: 1;
+}
+
+.footer-logo--frame,
+.footer-logo--letter {
+	fill: var(--color-white);
+}
+
+.top-links {
+	margin-top: 1rem;
+	margin-bottom: 2.25rem;
+	line-height: 32.5px;
+}
+
+.top-links ul {
+	font-size: var(--footer-top-links-size);
+	padding: 0;
+	font-weight: 400;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.top-links li {
+	list-style: none;
+}
+
+.top-links .footer-dot {
+	margin: 0 1.5rem;
+}
+
+.top-links,
+.footer-dot {
+	color: var(--color-white);
+}
+
+.bottom-links {
+	margin: 1rem 0;
+}
+
+.bottom-links a,
+.bottom-links .footer-dot,
+.copyrights {
+	font-size: var(--footer-bottom-links-size);
+	opacity: 0.6;
+	line-height: 1.375rem;
+}
+
+.bottom-links ul {
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.bottom-links li {
+	list-style: none;
+}
+
+.bottom-links .footer-dot {
+	margin: 0 1.25rem;
+}
+
+.copyrights {
+	color: var(--color-white);
+	display: flex;
+	justify-content: center;
+}
+
+@keyframes movingStripes {
+	0% {
+		background-position: 0%;
+	}
+	100% {
+		background-position: 75rem;
+	}
+}
+
+@media screen and (max-width: 48rem) {
+	footer {
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
+
+	.logo-container {
+		margin-bottom: 3rem;
+	}
+
+	.top-links {
+		line-height: 26px;
+	}
+
+	.top-links ul {
+		flex-direction: column;
+	}
+
+	.top-links li {
+		font-size: 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.top-links .footer-dot {
+		display: none;
+	}
+
+	.bottom-links .footer-dot {
+		margin: 0 0.75rem;
+	}
+}
