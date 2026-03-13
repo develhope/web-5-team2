@@ -1,6 +1,6 @@
 :root {
   /* Font */
-  --font-family: "IKEA Noto Sans", "Noto Sans", Arial, sans-serif;
+  --font-family: sans-serif;
   --line-height: 1.5;
   --font-weight-reg: 400;
   --font-weight-bold: 700;
@@ -25,12 +25,6 @@
   --padding-card-mobile: 1rem; /* 16px mobile */
   --section-gap: 2.5rem; /* 40px tra blocchi */
 
-
-
-/*@media*/
-/* Mobile: sotto i 600px (1 colonna di prodotti).
-Tablet: da 600px a 900px (2 colonne).
-Desktop: sopra i 900px/1200px (4 o 5 colonne). */
 }
 /* STYLING HEADER */
 * {
@@ -80,5 +74,103 @@ header {
 }
 
 /* STYLING MAIN */
+.main-content {
+  display: grid;
+ grid-template-columns: calc(50% - 10px) calc(50% - 10px);/* 2 colonne con un gap di 20px (10px da ogni lato). chiedere una cosa a Monica qui */
+  gap: 20px; 
+  padding: 20px;
+  width: 100%;
+  grid-auto-rows: 500px;
+  font-family: var(--font-family);
+
+}
+
+.ikea-card--full {
+  grid-column: span 2; 
+}
+.carousel-section{
+  grid-column: span 2;
+  width: 100%;
+}
+.ikea-card {
+  position: relative; /*  fa da "ancora" per il contenuto sopra */
+  width: 100%;
+  height: 100%; 
+   overflow: hidden; /*Taglia quello che esce fuori */
+  border-radius: 12px; /* Per l'effetto arrotondato che si vede in mobile */
+}
+
+.carousel-item{
+  display: none;
+}
+
+.ikea-card--light .card-title, 
+.ikea-card--light .card-desc {
+    color: black !important; 
+}
+.card-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fa sì che il video riempia la card senza deformarsi */
+  z-index: 1; /* Sta sotto */
+}
+
+.card-media img, 
+.card-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Taglia l'eccesso senza deformare */}
+
+ 
+
+.card-overlay {
+  position: relative; 
+  z-index: 2; /* Sta sopra al video/immagine */
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+ 
+}
+ .card-title {
+  color: white;
+  font-size: var(--h1-size);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+.card-desc{
+  color: white;
+  font-size: var(--h2-size);
+  margin: 5px;
+}
+/*Smartphone */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr; 
+    gap: 15px; 
+    padding: 10px;
+  }
+
+  .ikea-card--full {
+    grid-column: span 1; 
+  }
+  
+  .card-title {
+    font-size: 1.5rem; 
+  }
+}
+
+/*Ipad*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 400px; 
+  }
+}
 
 /* STYLING FOOTER */
