@@ -322,6 +322,31 @@ header {
 	justify-content: flex-end;
 }
 
+.hover-arrow {
+	position: absolute;
+	width: 3rem;
+	height: 3rem;
+	opacity: 0;
+	transform: translate(-5rem);
+	transition:
+		transform 0.4s,
+		opacity 0.2s;
+	color: var(--color-white);
+}
+
+.ikea-card--light .hover-arrow {
+	color: var(--color-black);
+}
+
+.hover-arrow svg {
+	transform: rotate(180deg);
+}
+
+.ikea-card:hover .hover-arrow {
+	transform: translate(0);
+	opacity: 1;
+}
+
 .card-title {
 	color: white;
 	font-size: var(--h1-size);
@@ -330,12 +355,19 @@ header {
 	padding-right: 120px;
 	line-height: 120%;
 	letter-spacing: -0.06rem;
+	transition: transform 0.5s;
 }
 
 .card-desc {
 	color: white;
 	font-size: var(--h2-size);
 	margin: 0;
+	transition: transform 0.5s;
+}
+
+.ikea-card:hover .card-title,
+.ikea-card:hover .card-desc {
+	transform: translate(3.75rem);
 }
 
 .image-dark-overlay {
