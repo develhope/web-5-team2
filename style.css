@@ -15,7 +15,7 @@
 	/* Font Sizes */
 	--font-size-base: 16px;
 	--h1-size: 2.25rem; /* 36px */
-	--h2-size: 1.125rem; /* 18px circa - Sottotitoli */
+	--h2-size: 1rem; /* 16px circa - Sottotitoli */
 	--price-size: 1.5rem; /* 24px */
 	--small-size: 0.875rem; /* 14px */
 	--footer-top-links-size: 1.25rem; /* 20px */
@@ -288,12 +288,15 @@ header {
 	flex-direction: column;
 	justify-content: flex-end;
 }
+
 .card-title {
 	color: white;
 	font-size: var(--h1-size);
 	font-weight: var(--font-weight-bold);
 	margin: 0;
+	padding-right: 120px;
 	line-height: 120%;
+	letter-spacing: -0.06rem;
 }
 
 .card-desc {
@@ -341,6 +344,8 @@ header {
 
 	.card-title {
 		font-size: 1rem;
+		padding-right: 56px;
+		letter-spacing: 0;
 	}
 }
 
@@ -372,6 +377,7 @@ header {
 
 	.card-title {
 		font-size: 25px;
+		padding-right: 76px;
 	}
 }
 
