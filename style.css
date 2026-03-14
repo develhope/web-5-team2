@@ -294,6 +294,24 @@ header {
 	object-fit: cover; /* Taglia l'eccesso senza deformare */
 }
 
+.btn-pause {
+	background-color: var(--color-white);
+	color: var(--color-black);
+	border: none;
+	border-radius: 50%;
+	position: absolute;
+	right: 1.5rem;
+	bottom: 1.5rem;
+	width: 3.75rem;
+	height: 3.75rem;
+	padding: 0;
+}
+
+.ikea-card--light .btn-pause {
+	background-color: var(--color-black);
+	color: var(--color-white);
+}
+
 .card-overlay {
 	position: relative;
 	z-index: 2; /* Sta sopra al video/immagine */
@@ -361,6 +379,13 @@ header {
 		font-size: 1rem;
 		padding-right: 56px;
 		letter-spacing: 0;
+	}
+
+	.btn-pause {
+		right: 1rem;
+		bottom: 1rem;
+		width: 2.5rem;
+		height: 2.5rem;
 	}
 }
 
