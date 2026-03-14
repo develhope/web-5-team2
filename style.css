@@ -301,6 +301,16 @@ header {
 	margin: 5px;
 }
 
+.image-dark-overlay {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 80px, rgba(0, 0, 0, 0) 200px);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
 /*Smartphone */
 @media (max-width: 768px) {
 	.navbar {
