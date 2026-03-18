@@ -272,8 +272,80 @@ header {
 	width: 100%;
 }
 
-.carousel-item {
+ /* .carousel-item {
 	display: none;
+}  */
+.carousel-section {
+  display: flex;
+  background-color: #f5b500;
+  padding: 60px 40px;
+  gap: 50px;
+  align-items: stretch; /* Fa sì che le card all'interno abbiano tutte la stessa altezza, anche se il contenuto è diverso */
+  min-height: 500px;
+}
+
+.carousel-header {
+  flex: 0 0 30%; /* Il testo occupa il 30% della larghezza */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+}
+
+.carousel-main-title {
+  font-size: 3.5rem; /* Titolo molto grande */
+  font-weight: 800;
+  line-height: 1.1; /* Riduce lo spazio tra le righe del titolo */
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.carousel-intro {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #111;
+}
+
+.carousel-track {
+  flex: 1; /* Prende tutto lo spazio rimanente */
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Per lo snapping sull'asse x */
+  gap: 15px;
+  padding-bottom: 30px;
+}
+
+.carousel-item {
+  flex: 0 0 320px; /* Larghezza fissa delle card */
+  scroll-snap-align: start;
+  background-color: white;
+  border-radius: 8px; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+}
+
+.item-info {
+  padding: 5%;
+  background: white;
+  flex-grow: 1;
+}
+
+.designer-name {
+  font-size: 0.85rem;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.story-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111;
 }
 
 .ikea-card--light .card-title,
@@ -380,7 +452,7 @@ header {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	z-index: 1;
+	z-index: 1; 
 }
 
 /*Smartphone */
