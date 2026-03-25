@@ -323,23 +323,20 @@ header {
 	width: 100%;
 }
 
- /* .carousel-item {
-	display: none;
-}  */
 .carousel-section {
   display: flex;
   background-color: #f5b500;
   padding: 60px 40px;
   gap: 50px;
-  align-items: stretch; /* Fa sì che le card all'interno abbiano tutte la stessa altezza, anche se il contenuto è diverso */
-  min-height: 500px;
+  align-items: flex-start; 
+  
 }
 
 .carousel-header {
   flex: 0 0 30%; /* Il testo occupa il 30% della larghezza */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: space-between; 
 }
 
 .carousel-main-title {
@@ -357,27 +354,45 @@ header {
 }
 
 .carousel-track {
-  flex: 1; /* Prende tutto lo spazio rimanente */
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory; /* Per lo snapping sull'asse x */
   gap: 15px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+   /* scrollbar-width: none;        
+  -ms-overflow-style: none;      */
+  align-items: stretch;
 }
 
+/* .carousel-track::-webkit-scrollbar {
+  display: none;               
+} */
+.carousel-track::-webkit-scrollbar {
+  height: 3px; /* sottile */
+}
+
+.carousel-track::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1); /* grigio chiaro */
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+  background: #111; /* scura come IKEA */
+  border-radius: 2px;
+}
 .carousel-item {
-  flex: 0 0 320px; /* Larghezza fissa delle card */
+  flex: 0 0 300px; /* Larghezza fissa delle card */
   scroll-snap-align: start;
   background-color: white;
   border-radius: 8px; 
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  
 }
 
 .carousel-item img {
   width: 100%;
-  height: 300px; 
+  height: 200px; 
   object-fit: cover;
 }
 
@@ -398,6 +413,43 @@ header {
   font-weight: bold;
   color: #111;
 }
+
+.carousel-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: flex-end;
+}
+
+.carousel-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+	min-width: 0;
+}
+
+.btn-prev,
+.btn-next {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #111;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-next {
+  background: #111;
+  color: white;
+}
+
+.btn-prev:hover { background: #111; color: white; }
+.btn-next:hover { background: #333; }
 
 .ikea-card--light .card-title,
 .ikea-card--light .card-desc {
@@ -545,8 +597,42 @@ header {
 		width: 2.5rem;
 		height: 2.5rem;
 	}
-}
 
+  .carousel-section {
+    flex-direction: column; /* testo sopra, card sotto */
+    padding: 32px 16px;
+    gap: 24px;
+  }
+
+  .carousel-header {
+    flex: none;
+    width: 100%;
+  }
+
+  .carousel-main-title {
+    font-size: 2rem;
+  }
+
+  .carousel-intro {
+    font-size: 1rem;
+  }
+
+  .carousel-right {
+    width: 100%;
+  }
+
+  .carousel-item {
+    flex: 0 0 220px; /* card più strette */
+  }
+
+  .carousel-item img {
+    height: 160px;
+  }
+
+  .carousel-controls {
+    justify-content: center; /* bottoni centrati su mobile */
+  }
+}
 /* Tablet */
 @media (min-width: 769px) and (max-width: 90rem) {
 	.main-content {
@@ -578,7 +664,24 @@ header {
 		padding-right: 76px;
 	}
 }
+@media (max-width: 769px) and (max-width: 64rem) {
+  .carousel-section {
+    padding: 40px 24px;
+    gap: 30px;
+  }
 
+  .carousel-header {
+    flex: 0 0 25%;
+  }
+
+  .carousel-main-title {
+    font-size: 2.5rem;
+  }
+
+  .carousel-item {
+    flex: 0 0 250px;
+  }
+}
 /* STYLING FOOTER */
 footer {
 	position: relative;
