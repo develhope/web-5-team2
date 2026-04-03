@@ -58,105 +58,82 @@
 
 /* STYLING HEADER */
 * {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
 }
 
 header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+	font-family: var(--font-family);
+}
+
+body {
+	margin: 0;
+}
+
+.menu-toggle {
+	display: none;
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 15px 40px;
+	max-width: var(--container-max-width);
+	display: flex;
+	align-items: center;
+	padding: 20px 24px;
+	margin: auto;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #0058a3;
-  letter-spacing: 1px;
-} 
-
 .logo img {
-  height: 40px;
+	height: 2.25rem;
 }
 
 .nav-links {
-  display: flex;
-  gap: 30px;
+	display: flex;
+	margin-left: 1rem;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #111;
-  font-size: 14px;
-  font-weight: 600;
-  padding-bottom: 5px;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s ease;
+	text-decoration: none;
+	color: #111;
+	font-size: 1rem;
+	padding: 1rem;
+	border-bottom: 2px solid transparent;
+	transition: all 0.2s ease;
 }
 
 .nav-links a:hover {
-  border-bottom: 2px solid #111;
+	border-bottom: 2px solid #111;
 }
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 15px 20px;
-  }
 
-  .nav-links {
-    gap: 20px;
-  }
+@media (min-width: 769px) and (max-width: 1024px) {
+	.navbar {
+		width: 100%;
+		justify-content: space-between;
+	}
 
-  .nav-links a {
-    font-size: 13px;
-  }
+	.menu-toggle {
+		display: block;
+		font-size: 1rem;
+	}
 
-  .logo img {
-    height: 35px;
-  }
+	.nav-links {
+		display: none;
+	}
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    padding: 15px 20px;
-  }
+	.navbar {
+		width: 100%;
+		justify-content: space-between;
+		padding: 0.6rem 1rem;
+	}
 
-  .menu-toggle {
-    display: block;
-    font-size: 25px;
-    cursor: pointer;
-  }
+	.menu-toggle {
+		display: block;
+		font-size: 1rem;
+	}
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    gap: 15px;
-    margin-top: 15px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-  }
-
-  .logo img {
-    height: 32px;
-  }
+	.nav-links {
+		display: none;
+	}
 }
 
 /* STYLING MAIN */
@@ -171,7 +148,7 @@ header {
 	margin: auto;
 	padding: 0 1.5rem;
 	padding-bottom: 5rem;
-	grid-template-rows: calc(100vh - 6rem - var(--grid-gap));
+	grid-template-rows: calc(100vh - 5.5rem - var(--grid-gap));
 	grid-auto-rows: var(--desktop-row-height);
 	font-family: var(--font-family);
 }
@@ -324,132 +301,138 @@ header {
 }
 
 .carousel-section {
-  display: flex;
-  background-color: #f5b500;
-  padding: 60px 40px;
-  gap: 50px;
-  align-items: flex-start; 
-  
+	display: flex;
+	border-radius: 12px;
+	background-color: #f5b500;
+	padding: 60px 40px;
+	gap: 50px;
+	align-items: flex-start;
 }
 
 .carousel-header {
-  flex: 0 0 30%; /* Il testo occupa il 30% della larghezza */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; 
+	flex: 0 0 30%; /* Il testo occupa il 30% della larghezza */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .carousel-main-title {
-  font-size: 3.5rem; /* Titolo molto grande */
-  font-weight: 800;
-  line-height: 1.1; /* Riduce lo spazio tra le righe del titolo */
-  margin-bottom: 20px;
-  color: #111;
+	font-size: 3.5rem; /* Titolo molto grande */
+	font-weight: 800;
+	line-height: 1.1; /* Riduce lo spazio tra le righe del titolo */
+	margin-bottom: 20px;
+	color: #111;
 }
 
 .carousel-intro {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: #111;
+	font-size: 1.1rem;
+	line-height: 1.5;
+	color: #111;
 }
 
 .carousel-track {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory; /* Per lo snapping sull'asse x */
-  gap: 15px;
-  padding-bottom: 10px;
-   /* scrollbar-width: none;        
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory; /* Per lo snapping sull'asse x */
+	gap: 15px;
+	padding-bottom: 10px;
+	/* scrollbar-width: none;        
   -ms-overflow-style: none;      */
-  align-items: stretch;
+	align-items: stretch;
 }
 
 /* .carousel-track::-webkit-scrollbar {
   display: none;               
 } */
 .carousel-track::-webkit-scrollbar {
-  height: 3px; /* sottile */
+	height: 3px; /* sottile */
 }
 
 .carousel-track::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.1); /* grigio chiaro */
+	background: rgba(0, 0, 0, 0.1); /* grigio chiaro */
 }
 
 .carousel-track::-webkit-scrollbar-thumb {
-  background: #111; /* scura come IKEA */
-  border-radius: 2px;
+	background: #111; /* scura come IKEA */
+	border-radius: 2px;
 }
 .carousel-item {
-  flex: 0 0 300px; /* Larghezza fissa delle card */
-  scroll-snap-align: start;
-  background-color: white;
-  border-radius: 8px; 
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  
+	flex: 0 0 300px; /* Larghezza fissa delle card */
+	scroll-snap-align: start;
+	background-color: white;
+	border-radius: 8px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
 
 .carousel-item img {
-  width: 100%;
-  height: 200px; 
-  object-fit: cover;
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
 }
 
 .item-info {
-  padding: 5%;
-  background: white;
-  flex-grow: 1;
+	padding: 5%;
+	background: white;
+	flex-grow: 1;
 }
 
 .designer-name {
-  font-size: 0.85rem;
-  color: #111;
-  margin-bottom: 5px;
+	font-size: 0.85rem;
+	color: #111;
+	margin-bottom: 5px;
 }
 
 .story-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #111;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: #111;
 }
 
 .carousel-controls {
-  display: flex;
-  gap: 10px;
-  margin-top: 16px;
-  justify-content: flex-end;
+	display: flex;
+	gap: 10px;
+	margin-top: 16px;
+	justify-content: flex-end;
 }
 
 .carousel-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
 	min-width: 0;
 }
 
 .btn-prev,
 .btn-next {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid #111;
-  background: transparent;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, color 0.2s;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border: 2px solid #111;
+	background: transparent;
+	font-size: 16px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition:
+		background 0.2s,
+		color 0.2s;
 }
 
 .btn-next {
-  background: #111;
-  color: white;
+	background: #111;
+	color: white;
 }
 
-.btn-prev:hover { background: #111; color: white; }
-.btn-next:hover { background: #333; }
+.btn-prev:hover {
+	background: #111;
+	color: white;
+}
+.btn-next:hover {
+	background: #333;
+}
 
 .ikea-card--light .card-title,
 .ikea-card--light .card-desc {
@@ -555,26 +538,23 @@ header {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	z-index: 1; 
+	z-index: 1;
 }
 
 /*Smartphone */
 @media (max-width: 768px) {
-	.navbar {
-		height: 4.25rem;
-	}
-
 	.main-content {
 		grid-template-columns: 1fr;
 		gap: 15px;
 		padding: 0 1rem;
 		padding-bottom: 4rem;
+		grid-template-rows: var(--mobile-row-height);
 		grid-auto-rows: var(--mobile-row-height);
 	}
 
 	.main-content section.ikea-card,
 	.carousel-section {
-		grid-column: span 1;
+		grid-column: span 2;
 	}
 
 	.card-overlay {
@@ -598,40 +578,44 @@ header {
 		height: 2.5rem;
 	}
 
-  .carousel-section {
-    flex-direction: column; /* testo sopra, card sotto */
-    padding: 32px 16px;
-    gap: 24px;
-  }
+	.search-options {
+		height: 4.5rem;
+	}
 
-  .carousel-header {
-    flex: none;
-    width: 100%;
-  }
+	.carousel-section {
+		flex-direction: column; /* testo sopra, card sotto */
+		padding: 32px 16px;
+		gap: 24px;
+	}
 
-  .carousel-main-title {
-    font-size: 2rem;
-  }
+	.carousel-header {
+		flex: none;
+		width: 100%;
+	}
 
-  .carousel-intro {
-    font-size: 1rem;
-  }
+	.carousel-main-title {
+		font-size: 2rem;
+	}
 
-  .carousel-right {
-    width: 100%;
-  }
+	.carousel-intro {
+		font-size: 1rem;
+	}
 
-  .carousel-item {
-    flex: 0 0 220px; /* card più strette */
-  }
+	.carousel-right {
+		width: 100%;
+	}
 
-  .carousel-item img {
-    height: 160px;
-  }
+	.carousel-item {
+		flex: 0 0 220px; /* card più strette */
+	}
 
-  .carousel-controls {
-    justify-content: center; /* bottoni centrati su mobile */
-  }
+	.carousel-item img {
+		height: 160px;
+	}
+
+	.carousel-controls {
+		justify-content: center; /* bottoni centrati su mobile */
+	}
 }
 /* Tablet */
 @media (min-width: 769px) and (max-width: 90rem) {
@@ -665,22 +649,22 @@ header {
 	}
 }
 @media (max-width: 769px) and (max-width: 64rem) {
-  .carousel-section {
-    padding: 40px 24px;
-    gap: 30px;
-  }
+	.carousel-section {
+		padding: 40px 24px;
+		gap: 30px;
+	}
 
-  .carousel-header {
-    flex: 0 0 25%;
-  }
+	.carousel-header {
+		flex: 0 0 25%;
+	}
 
-  .carousel-main-title {
-    font-size: 2.5rem;
-  }
+	.carousel-main-title {
+		font-size: 2.5rem;
+	}
 
-  .carousel-item {
-    flex: 0 0 250px;
-  }
+	.carousel-item {
+		flex: 0 0 250px;
+	}
 }
 /* STYLING FOOTER */
 footer {
