@@ -474,6 +474,14 @@ body {
 	padding: 0;
 }
 
+.btn-pause:hover {
+	opacity: 0.9;
+}
+
+.btn-pause:active {
+	opacity: 0.8;
+}
+
 .ikea-card--light .btn-pause {
 	background-color: var(--color-black);
 	color: var(--color-white);
