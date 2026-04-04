@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="style.css" rel="stylesheet" />
-		<script src="script.js"></script>
 		<title>Hej! Welcome to IKEA Global</title>
 	</head>
 
@@ -27,7 +26,7 @@
 		<main class="main-content">
 			<section class="ikea-card ikea-card--video ikea-card--light">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="grejsimojs_video">
 						<source src="assets/video/video_sedia_rosa.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -50,7 +49,7 @@
 					</div>
 					<p class="card-desc">Let your home come out to play</p>
 					<h2 class="card-title">The GREJSIMOJS collection</h2>
-					<button class="btn-pause" aria-label="Pausa">
+					<button class="btn-pause" aria-label="Pausa" id="grejsimojs_btn">
 						<svg
 							width="12"
 							height="14"
@@ -196,7 +195,7 @@
 
 			<section class="ikea-card ikea-card--video">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="pantry_video">
 						<source src="assets/video/Video-cucina.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -219,7 +218,7 @@
 					</div>
 					<p class="card-desc">Kitchen storage ideas</p>
 					<h2 class="card-title">A pantry with room for more</h2>
-					<button class="btn-pause" aria-label="Pausa">
+					<button class="btn-pause" aria-label="Pausa" id="pantry_btn">
 						<svg
 							width="12"
 							height="14"
@@ -292,7 +291,7 @@
 
 			<section class="ikea-card ikea-card--video">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="talents_video">
 						<source src="assets/video/Video_1.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -315,7 +314,7 @@
 					</div>
 					<p class="card-desc">And we have a winner!</p>
 					<h2 class="card-title">The IKEA Talents cook-off</h2>
-					<button class="btn-pause">
+					<button class="btn-pause" id="talents_btn">
 						<svg
 							width="12"
 							height="14"
@@ -361,7 +360,7 @@
 
 			<section class="ikea-card ikea-card--video ikea-card--full">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="folklotic_video">
 						<source src="assets/video/cuscino_video.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -384,7 +383,7 @@
 					</div>
 					<p class="card-desc">Style report</p>
 					<h2 class="card-title">Folklotic inspiration for the season</h2>
-					<button class="btn-pause">
+					<button class="btn-pause" id="folklotic_btn">
 						<svg
 							width="12"
 							height="14"
@@ -403,7 +402,7 @@
 
 			<section class="ikea-card ikea-card--video ikea-card--light">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="yearbook_video">
 						<source src="assets/video/yearbook_video.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -426,7 +425,7 @@
 					</div>
 					<p class="card-desc">Oh, what a year!</p>
 					<h2 class="card-title">The IKEA Yearbook</h2>
-					<button class="btn-pause">
+					<button class="btn-pause" id="yearbook_btn">
 						<svg
 							width="12"
 							height="14"
@@ -552,7 +551,7 @@
 
 			<section class="ikea-card ikea-card--video ikea-card--full">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="storage_video">
 						<source src="assets/video/libreria_video.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -575,7 +574,7 @@
 					</div>
 					<p class="card-desc">Smart storage ideas for every home</p>
 					<h2 class="card-title">Double-duty products for maximum living</h2>
-					<button class="btn-pause">
+					<button class="btn-pause" id="storage_btn">
 						<svg
 							width="12"
 							height="14"
@@ -621,7 +620,7 @@
 
 			<section class="ikea-card ikea-card--video">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="mealtime_video">
 						<source src="assets/video/bambini_con_famiglia.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -644,7 +643,7 @@
 					</div>
 					<p class="card-desc">Ready, steady, cook!</p>
 					<h2 class="card-title">Putting the fun into family mealtime</h2>
-					<button class="btn-pause">
+					<button class="btn-pause" id="mealtime_btn">
 						<svg
 							width="12"
 							height="14"
@@ -752,7 +751,7 @@
 
 			<section class="ikea-card ikea-card--video">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="sandlopare_video">
 						<source src="assets/video/savana_pupazzi.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -775,7 +774,7 @@
 					</div>
 					<p class="card-desc">A (cuddly!) adventure awaits</p>
 					<h2 class="card-title">The SANDLÖPARE collection</h2>
-					<button class="btn-pause">
+					<button class="btn-pause" id="sandlopare_btn">
 						<svg
 							width="12"
 							height="14"
@@ -821,7 +820,7 @@
 
 			<section class="ikea-card ikea-card--video ikea-card--full">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="ivar_video">
 						<source src="assets/video/ivar.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -844,7 +843,7 @@
 					</div>
 					<p class="card-desc">Celebrating a storage superstar</p>
 					<h2 class="card-title">Long live IVAR!</h2>
-					<button class="btn-pause">
+					<button class="btn-pause" id="ivar_btn">
 						<svg
 							width="12"
 							height="14"
@@ -863,7 +862,7 @@
 
 			<section class="ikea-card ikea-card--video ikea-card--light">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="kitchen_video">
 						<source src="assets/video/ikeakitchen_entry.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -886,7 +885,7 @@
 					</div>
 					<p class="card-desc">Discover your dream kitchen</p>
 					<h2 class="card-title">Take the quiz!</h2>
-					<button class="btn-pause">
+					<button class="btn-pause" id="kitchen_btn">
 						<svg
 							width="12"
 							height="14"
@@ -1051,7 +1050,7 @@
 
 			<section class="ikea-card ikea-card--video">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="coworker_video">
 						<source src="assets/video/persone_video.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -1074,7 +1073,7 @@
 					</div>
 					<p class="card-desc">Co-worker stories</p>
 					<h2 class="card-title">What's life like in Älmhult?</h2>
-					<button class="btn-pause">
+					<button class="btn-pause" id="coworker_btn">
 						<svg
 							width="12"
 							height="14"
@@ -1174,7 +1173,7 @@
 
 			<section class="ikea-card ikea-card--video">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="school_video">
 						<source src="assets/video/scrivania_bianca.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -1197,7 +1196,7 @@
 					</div>
 					<p class="card-desc">Back to school</p>
 					<h2 class="card-title">New year, new room!</h2>
-					<button class="btn-pause">
+					<button class="btn-pause" id="school_btn">
 						<svg
 							width="12"
 							height="14"
@@ -1243,7 +1242,7 @@
 
 			<section class="ikea-card ikea-card--video">
 				<div class="card-media">
-					<video autoplay muted loop playsinline>
+					<video autoplay muted loop playsinline id="wardrobe_video">
 						<source src="assets/video/armadio_bianco.mp4" type="video/mp4" />
 					</video>
 				</div>
@@ -1266,7 +1265,7 @@
 					</div>
 					<p class="card-desc">The PAX wardrobe system</p>
 					<h2 class="card-title">Spacious storage for every space</h2>
-					<button class="btn-pause" aria-label="Pausa">
+					<button class="btn-pause" aria-label="Pausa" id="wardrobe_btn">
 						<svg
 							width="12"
 							height="14"
@@ -1425,5 +1424,6 @@
 				<span>© Inter IKEA Systems B.V. 1999 - 2026</span>
 			</div>
 		</footer>
+		<script src="script.js"></script>
 	</body>
 </html>

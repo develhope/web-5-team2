@@ -357,37 +357,38 @@ body {
 	border-radius: 2px;
 }
 .carousel-item {
-	flex: 0 0 250px; /* Larghezza fissa delle card */
 	scroll-snap-align: start;
 	background-color: white;
 	border-radius: 8px;
 	overflow: hidden;
 	display: flex;
+	flex-shrink: 0;
 	flex-direction: column;
+	flex-basis: 20vw;
 }
 
 .carousel-item img {
-	width: 100%;
-	height: 200px;
+	width: 20vw;
+	height: 20vw;
 	object-fit: cover;
 }
 
 .item-info {
-	padding: 5%;
+	padding: 1rem;
 	background: white;
-	flex-grow: 1;
 }
 
 .designer-name {
 	font-size: 0.85rem;
 	color: #111;
-	margin-bottom: 5px;
+	margin: 0;
 }
 
 .story-title {
 	font-size: 1.1rem;
 	font-weight: bold;
 	color: #111;
+	margin: 0;
 }
 
 .carousel-controls {
@@ -576,6 +577,10 @@ body {
 		letter-spacing: 0;
 	}
 
+	.carousel-main-title {
+		margin: 0;
+	}
+
 	.btn-pause {
 		right: 1rem;
 		bottom: 1rem;
@@ -585,41 +590,6 @@ body {
 
 	.search-options {
 		height: 4.5rem;
-	}
-
-	.carousel-section {
-		flex-direction: column; /* testo sopra, card sotto */
-		padding: 32px 16px;
-		gap: 24px;
-	}
-
-	.carousel-header {
-		flex: none;
-		width: 100%;
-	}
-
-	.carousel-main-title {
-		font-size: 2rem;
-	}
-
-	.carousel-intro {
-		font-size: 1rem;
-	}
-
-	.carousel-right {
-		width: 100%;
-	}
-
-	.carousel-item {
-		flex: 0 0 220px; /* card più strette */
-	}
-
-	.carousel-item img {
-		height: 160px;
-	}
-
-	.carousel-controls {
-		justify-content: center; /* bottoni centrati su mobile */
 	}
 }
 /* Tablet */
@@ -653,24 +623,52 @@ body {
 		padding-right: 76px;
 	}
 }
-@media (max-width: 769px) and (max-width: 64rem) {
+
+@media (max-width: 1025px) {
 	.carousel-section {
-		padding: 40px 24px;
-		gap: 30px;
+		flex-direction: column; /* testo sopra, card sotto */
+		padding: 32px 16px;
+		gap: 24px;
 	}
 
 	.carousel-header {
-		flex: 0 0 25%;
+		flex: none;
+		width: 100%;
 	}
 
 	.carousel-main-title {
-		font-size: 2.5rem;
+		font-size: 2rem;
+	}
+
+	.carousel-intro {
+		font-size: 1rem;
+	}
+
+	.carousel-right {
+		width: 100%;
 	}
 
 	.carousel-item {
-		flex: 0 0 250px;
+		flex-shrink: 0;
+		flex-basis: calc(100vw - 2.25rem * 2);
+	}
+
+	.carousel-item img {
+		width: calc(100vw - 2.25rem * 2);
+		height: calc(100vw - 2.25rem * 2);
+	}
+
+	.carousel-controls {
+		justify-content: center; /* bottoni centrati su mobile */
 	}
 }
+
+@media (min-width: 769px) and (max-width: 1025px) {
+	.carousel-section {
+		grid-row: span 3;
+	}
+}
+
 /* STYLING FOOTER */
 footer {
 	position: relative;
