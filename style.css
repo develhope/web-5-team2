@@ -563,11 +563,12 @@ body {
 		padding: 0 1rem;
 		padding-bottom: 4rem;
 		grid-template-rows: var(--mobile-row-height);
-		grid-auto-rows: var(--mobile-row-height);
+		grid-auto-rows: auto;
 	}
 
 	.main-content section.ikea-card,
 	.carousel-section {
+		height: var(--mobile-row-height);
 		grid-column: span 2;
 	}
 
@@ -583,6 +584,11 @@ body {
 		font-size: 1rem;
 		padding-right: 56px;
 		letter-spacing: 0;
+	}
+
+	.carousel-section {
+		min-height: 52rem;
+		height: 150vw;
 	}
 
 	.carousel-main-title {
