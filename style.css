@@ -572,6 +572,10 @@ body {
 		grid-column: span 2;
 	}
 
+	.ikea-card--shopping {
+		min-height: 400px;
+	}
+
 	.card-overlay {
 		padding: var(--padding-card-mobile);
 	}
